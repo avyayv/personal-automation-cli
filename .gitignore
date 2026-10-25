@@ -1,14 +1,9 @@
 # Local builds
-/apple-home
-/gree
 /oura
-cli/apple-home-cli/apple-home
-cli/gree-cli/gree
 cli/oura-ring-cli/oura
 
 # Local config
 config.toml
-cli/gree-cli/config.toml
 cli/oura-ring-cli/config.toml
 
 # Editor / OS noise

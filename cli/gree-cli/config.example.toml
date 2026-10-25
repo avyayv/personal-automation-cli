@@ -1,6 +1,0 @@
-# Defaults for the gree CLI.
-scan_wait = 2.0
-
-# Preferred selector. MAC is recommended because DHCP IPs can move.
-# preferred_mac = "c039375d1be7"
-# preferred_ip = "192.168.1.50"

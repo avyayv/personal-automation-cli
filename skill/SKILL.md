@@ -1,6 +1,6 @@
 ---
 name: personal-automation
-description: Use when the user asks to use personal automation CLIs, especially Oura Ring health data or GREE HVAC/AC control.
+description: Use when the user asks to use personal automation CLIs, especially Oura Ring health data.
 ---
 
 # Personal Automation
@@ -8,22 +8,19 @@ description: Use when the user asks to use personal automation CLIs, especially 
 Use this skill for basic operation of the personal automation CLIs:
 
 - `oura` — query Oura Ring data.
-- `gree` — discover/control GREE HVAC units.
 
 ## Install / update
 
-Install the CLIs from the latest release:
+Install the CLI from the latest release:
 
 ```bash
 curl -fsSL https://github.com/avyayv/personal-automation-cli/releases/latest/download/install.sh | bash -s -- oura
-curl -fsSL https://github.com/avyayv/personal-automation-cli/releases/latest/download/install.sh | bash -s -- gree
 ```
 
 Update:
 
 ```bash
 oura update
-gree update
 ```
 
 ## Oura
@@ -79,43 +76,6 @@ Fallback for unsupported Oura endpoints:
 ```bash
 oura get daily_activity --param start_date=2026-05-01 --param end_date=2026-05-06
 oura get /v2/usercollection/workout --param start_date=2026-05-01 --param end_date=2026-05-06
-```
-
-## GREE
-
-Discover devices and check status:
-
-```bash
-gree devices
-gree status
-```
-
-Control AC:
-
-```bash
-gree on
-gree off
-gree temp 68
-gree mode heat
-gree mode cool
-gree fan auto
-```
-
-Save default device/config:
-
-```bash
-gree config init
-gree config set-device --mac c039375d1be7
-gree config set-device --ip 192.168.1.50
-gree config set scan-wait 2.5
-gree config show
-```
-
-If needed, target a device explicitly:
-
-```bash
-gree status --mac c039375d1be7
-gree temp 68 --ip 192.168.1.50
 ```
 
 All CLI output is JSON.

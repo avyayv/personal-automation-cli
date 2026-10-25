@@ -29,7 +29,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for dir in cli/apple-home-cli cli/gree-cli cli/oura-ring-cli; do
+          for dir in cli/oura-ring-cli; do
             echo "Testing ${dir}"
             (cd "$dir" && go test ./...)
           done
@@ -82,8 +82,6 @@ jobs:
 
           for goos in darwin linux; do
             for goarch in amd64 arm64; do
-              build_one apple-home cli/apple-home-cli ./cmd/apple-home "$goos" "$goarch"
-              build_one gree cli/gree-cli . "$goos" "$goarch"
               build_one oura cli/oura-ring-cli . "$goos" "$goarch"
             done
           done
@@ -101,8 +99,6 @@ jobs:
           Install with:
 
           \`\`\`bash
-          curl -fsSL https://github.com/avyayv/personal-automation-cli/releases/latest/download/install.sh | bash -s -- apple-home
-          curl -fsSL https://github.com/avyayv/personal-automation-cli/releases/latest/download/install.sh | bash -s -- gree
           curl -fsSL https://github.com/avyayv/personal-automation-cli/releases/latest/download/install.sh | bash -s -- oura
           \`\`\`
 

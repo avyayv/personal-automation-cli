@@ -10,7 +10,7 @@ usage() {
   cat <<'EOF'
 Install a personal-automation-cli binary.
 
-Usage: install.sh <apple-home|gree|oura>
+Usage: install.sh <oura>
 
 Environment:
   PERSONAL_AUTOMATION_CLI_APP          Binary to install when no argument is provided
@@ -21,7 +21,7 @@ EOF
 }
 
 case "$app" in
-  apple-home|gree|oura) ;;
+  oura) ;;
   -h|--help) usage; exit 0 ;;
   "") usage >&2; exit 2 ;;
   *)
