@@ -10,7 +10,7 @@ usage() {
   cat <<'EOF'
 Install a personal-automation-cli binary.
 
-Usage: install.sh <oura>
+Usage: install.sh <oura|eightsleep>
 
 Environment:
   PERSONAL_AUTOMATION_CLI_APP          Binary to install when no argument is provided
@@ -21,7 +21,7 @@ EOF
 }
 
 case "$app" in
-  oura) ;;
+  oura|eightsleep) ;;
   -h|--help) usage; exit 0 ;;
   "") usage >&2; exit 2 ;;
   *)

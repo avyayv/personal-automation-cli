@@ -1,0 +1,4 @@
+# Defaults for the eightsleep CLI. Session fields are managed automatically.
+# You can also leave this file empty and set EIGHTSLEEP_EMAIL / EIGHTSLEEP_PASSWORD instead.
+email = "you@example.com"
+password = "YOUR_EIGHT_SLEEP_PASSWORD"

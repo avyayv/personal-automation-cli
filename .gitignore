@@ -1,10 +1,13 @@
 # Local builds
 /oura
+/eightsleep
 cli/oura-ring-cli/oura
+cli/eightsleep-cli/eightsleep
 
 # Local config
 config.toml
 cli/oura-ring-cli/config.toml
+cli/eightsleep-cli/config.toml
 
 # Editor / OS noise
 .DS_Store
